@@ -1,0 +1,107 @@
+\subsection{Metrics}
+...
+
+\subsection{Results A——}
+The results of ... are summarised in Tab.~\ref{tab:results_1}. We achieved ...
+
+\begin{table}[htb]
+\centering
+\caption{Results of ...}
+\label{tab:results_1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{5cm}<{\centering} p{5cm}<{\centering} p{5cm}<{\centering}@{}}
+\toprule
+Dataset   & Precision & Running time/s \\ \midrule
+Counting  &  &        \\
+Detection &  &       \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{Result in the counting dataset}
+... 
+
+
+\subsubsection{Result in the detection dataset}
+...
+
+
+\subsection{Results B——}
+The results of ... are summarised in Tab.~\ref{tab:results_2}. It achieved ...
+
+\begin{table}[htb]
+\centering
+\caption{Results of ...}
+\label{tab:results_2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{5cm}<{\centering} p{5cm}<{\centering} p{5cm}<{\centering}@{}}
+\toprule
+Dataset   & Precision & Running time/s \\ \midrule
+Counting  &  &       \\
+Detection &  &       \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{Result in the counting dataset}
+...
+
+
+\subsubsection{Result in the detection dataset}
+...
+
+
+\subsection{Comparison}
+
+\subsubsection{Running Time}
+To be fair, we turned off the GPU acceleration and ... The results are listed in Tab.~\ref{tab:running_time_test}.
+
+We found that ... 
+
+\begin{table}[htb]
+\centering
+\caption{Results of the running time tests}
+\label{tab:running_time_test}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{7cm}<{\centering} p{4cm}<{\centering} p{4cm}<{\centering}@{}}
+\toprule
+                                   & Counting dataset & Detection dataset \\ \midrule
+Algorithm 1 &         &          \\
+... without GPU                              &          &             \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+\subsubsection{Precision}
+... 
+
+\subsubsection{Energy-precision Ratio}
+... The expression is:
+
+\begin{equation}
+    \left\{\begin{matrix}
+    R = \frac{A}{W}  \\
+    W = \sum p_h\times T
+    \end{matrix}\right.
+\end{equation}
+
+where $W$ is ..., which gives the... in Tab.~\ref{tab:energy-accuracy ratio test}.
+
+\begin{table}[htb]
+\centering
+\caption{The results of the energy-precision ratio test}
+\label{tab:energy-accuracy ratio test}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{7cm}<{\centering} p{4cm}<{\centering} p{4cm}<{\centering}@{}}
+\toprule
+                                   & Counting dataset       & Detection dataset      \\ \midrule
+Algorithm 1 &                &                \\
+... with GPU                     &  &  \\
+... without GPU                  &  &  \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{Overall Analysis}
+...
