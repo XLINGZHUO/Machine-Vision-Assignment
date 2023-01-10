@@ -1,0 +1,13 @@
+This paper is the group work for the Machine Vision course and is divided into seven sections. We present the background, assumptions, objectives and possible challenges of the apple counting task in Section~\ref{sec:Intro}.
+
+In Section~\ref{sec:Rel_works}, we summarise relevant researches of apple counting in the fields of traditional image processing and machine learning respectively, and point out the shortcomings in these studies.
+
+Afterwards, in Section~\ref{sec:Data}, we present the MinneApple dataset we have adopted and the quality of the images in it, including: resolution, number, lighting conditions and occlusion. In Section~\ref{sec:Method}, we present our two algorithms, the morphology and HSV based algorithm and the deep learning algorithm based on YOLOX, standing for traditional image processing and deep learning. We focus on image processing techniques in the traditional algorithm, such as: colour space conversion, inRange thresholding, opening operation, etc., and on network structures of YOLOX: CSPDarknet, decoupled YOLO head, etc.
+
+We describe in Section~\ref{sec:Experiment} how to determine the the range of that distinguishes the colour of the background from that of the apple, inRange thresholding kernel size and shape. We also describe the parameters of the hardware used to train YOLOX and the hyperparameters of the model. It needs to be noted that we trained our deep learning model by freeze training, allowing for more efficient execution.
+
+We complete the experiments on both the counting and detection test datasets of the MinneApple and summarise the results in Section~\ref{sec:Results}, taking precision and average precision as metrics. The experimental results show that although YOLOX's precision and average precision are much higher (26.03\% and 46.83\%) than morphology and HSV based algorithm's on both datasets, its real-time performance is poor. We then add the energy-precision comparison and find that YOLOX with GPU acceleration outperforms morphology and HSV based algorithm in this index.
+
+Conclusions, references and appendices are included at the end, with the appendices containing the codes for our morphology and HSV based algorithm.
+
+

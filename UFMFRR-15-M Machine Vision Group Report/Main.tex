@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% An unofficial report template for MSc Robotics of the University of Bristol  
+% By Tunwu Li (SID 2253543)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{ctex} % 允许出现中文字符
+\usepackage[english]{babel} % Add spaces between languages
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath} % Mathematical formulas
+\usepackage{xspace}
+
+\usepackage{pdfpages}
+
+\usepackage{graphicx} % For graphics
+\usepackage{array} % For formats of tables
+\usepackage{multirow} % Merge cells vertically
+\usepackage{pythonhighlight} % Python codes
+\usepackage{listing} % Codes
+\graphicspath{{images/}} % Declare the folder where the images are stored
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref} % Hyperlinks
+\usepackage[hmargin=1.25in,vmargin=1.25in]{geometry} %页边距
+
+\usepackage[noend]{algpseudocode} % for pseudocode
+\usepackage{algorithmicx,algorithm}
+
+\usepackage{enumitem} % 编号的缩进
+\usepackage{annotate-equations} % Annotated equations
+
+\usepackage[natbibapa]{apacite}
+\usepackage{natbib}
+\bibliographystyle{apacite} % APA Citation
+\setlength{\bibsep}{0pt} % 设置 APA 格式的参考文献段间距为 0
+
+\usepackage{booktabs} % Book-tabs table
+\usepackage{subfigure}
+% \usepackage{subcaption} % Subheadings for figures and tables
+
+\renewcommand{\thetable}{\thesection{}.\arabic{table}}
+\renewcommand{\thefigure}{\thesection{}.\arabic{figure}}
+\renewcommand{\theequation}{\thesection{}.\arabic{equation}}
+\counterwithin{algorithm}{section}
+
+\linespread{1.0}
+\setlength{\parskip}{0.2cm}
+\setlength{\parindent}{0pt}
+
+
+\lstset{language=Matlab,
+        alsolanguage=C++,
+        tabsize=4,
+            frame=shadowbox, % 带阴影的框
+            commentstyle=\color{red!10!green!100}, % 绿色注释
+            rulesepcolor=\color{red!20!green!20!blue!20}, % 代码块边框为淡青色
+            keywordstyle=\color{blue!90}\bfseries, % 关键字为蓝色，粗体
+            showstringspaces=false, % 不显示字符串中间的空格标记
+            stringstyle=\ttfamily, % 字符串的特殊格式
+            keepspaces=true,
+            breakindent=22pt,
+            numbers=left, % 左侧显示行号
+            stepnumber=1, % 行号步长
+            numberstyle={\color[RGB]{0,192,192}\tiny}, % 行号字体用小号
+            numbersep=8pt,  %设置行号与代码的距离，默认是5pt
+            basicstyle=\footnotesize, % 设置代码的大小
+            extendedchars=false, % 解决代码跨页时，章节标题、页眉等汉字不显示的问题
+            showspaces=false, %
+            flexiblecolumns=true, %
+            breaklines=true, %对过长的代码自动换行
+            breakautoindent=true, %
+            breakindent=4em, %
+            escapebegin=\begin{CJK*}{GBK}{hei},escapeend=\end{CJK*},
+            aboveskip=1em, %代码块边框
+            tabsize=2
+            % backgroundcolor=\color[rgb]{0.91,0.91,0.91}   %添加背景色
+}
+
+
+
+%---------------------------------------------------------------------------------
+
+\begin{document}
+% \setlength{\parindent}{0pt}
+\linespread{1.0} %1.5倍行距
+
+\input{Chapters/Title page}
+\pagestyle{plain}
+
+
+%---------------------------------------------------------------------------------
+\newpage
+\includepdf{Contribution.pdf} 
+
+\newpage
+\linespread{1.0}
+
+\begin{center}
+    \section*{Abstract}
+\end{center}
+\addcontentsline{toc}{section}{Abstract}
+\pagenumbering{roman}
+\input{Chapters/01_Abstract}
+
+%---------------------------------------------------------------------------------
+\newpage
+\linespread{1.0}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+\tableofcontents % Required
+\listoffigures
+\listoftables
+\thispagestyle{empty}
+
+%---------------------------------------------------------------------------------
+\newpage
+\linespread{1.0}
+\setlength{\parskip}{0.2cm} %段间距0.2cm
+\pagestyle{plain}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+% Do not edit the below sections, enter all details in respective chapters
+% Add the images/screen-shorts to the image folder and insert them in the respective chapters
+
+\section{Introduction}
+\label{sec:Intro}
+\input{Chapters/02_Introduction}
+
+\section{Related Works}
+\label{sec:Rel_works}
+\input{Chapters/03_Related Works}
+
+\section{Data Acquisition}
+\label{sec:Data}
+\input{Chapters/04_Data Acquisition and Datasets}
+
+\section{Methodology}
+\label{sec:Method}
+\input{Chapters/05_Methodology}
+
+\section{Experiment and Implementation}
+\label{sec:Experiment}
+\input{Chapters/06_Experiment and Implementation}
+
+\section{Results and Evaluation}
+\label{sec:Results}
+\input{Chapters/07_Results and Evaluation}
+
+\section{Conclusions and Future Works}
+\label{sec:Conclusions}
+\input{Chapters/08_Conclusion}
+
+% \nocite{*}
+\bibliography{References}
+\addcontentsline{toc}{section}{References}
+
+\newpage
+\pagestyle{empty}
+\section*{Appendix A Python Codes of Morphology and HSV based Algorithm on Counting Test Dataset}
+\addcontentsline{toc}{section}{Appendix A Python Codes of Morphology and HSV based Algorithm on Counting Test Dataset}
+\input{Chapters/Appendix A}
+\thispagestyle{empty}
+
+\newpage
+\pagestyle{empty}
+\section*{Appendix B Python Codes of Morphology and HSV based Algorithm on Detection Test Dataset}
+\addcontentsline{toc}{section}{Appendix B Python Codes of Morphology and HSV based Algorithm on Detection Test Dataset}
+\input{Chapters/Appendix B}
+\thispagestyle{empty}
+
+\newpage
+\pagestyle{empty}
+\section*{Appendix C Python Codes for Converting MASK form Annotations to VOC form}
+\addcontentsline{toc}{section}{Appendix C Python Codes for Converting MASK form Annotations to VOC form}
+\input{Chapters/Appendix C}
+\thispagestyle{empty}
+
+%---------------------------------------------------------------------------------
+
+\end{document}
