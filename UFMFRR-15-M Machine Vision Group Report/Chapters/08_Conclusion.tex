@@ -1,9 +1,0 @@
-In conclusion, we achieved apple yield estimation by both traditional image processing and deep learning solutions. We compared them in terms of runtime, precision and energy-precision ratio and found that morphology and HSV based algorithm consumes less power and has better real-time performance, but is much less accurate than the deep learning method, which has higher recognition precision, but takes longer and consumes more energy. 
-
-Nonetheless, the results of the trained YOLOX in the test set were not satisfactory because the number of apples and their occlusion in the training set differed notably from those in the test set. In addition, the handful of annotations in the test set was much lower than the actual values, which also affected the precision.
-
-One of the future works is to improve the generalisation of the model through image augmentation pre-processing inputs, as the quality of the apple counting task is influenced by factors such as colour, natural light conditions, occlusion, etc. 
-
-For the morphology and HSV based algorithm, although its precision is relatively low, the power consumption of the device, with its short running time, makes it possible to develop it on mobile devices, using movement to reduce the mutual occlusion of recognition objects.
-
-Moreover, we believe that YOLOX can be combined with lightweight networks such as MobileNet to reduce complexity and therefore running time. The combination with lightweight networks would enable deep learning algorithms to be adapted to compact robots.
